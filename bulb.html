@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BULB</title>
+    <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+              }
+            .btn{
+                width: auto;
+                padding: 12px;
+                text-align: center;
+                margin-top: 30px;
+                background-color: red;
+                border-radius: 40px;
+            }
+    </style>
+
+</head>
+<body style="background-color :black">
+    
+    <img id="bulb" src="https://st2.depositphotos.com/6499014/12269/i/450/depositphotos_122692876-stock-photo-tungsten-on-black-background.jpg?forcejpeg=true" alt="" class="center">
+    <button id="togglebtn" class="center btn">ON</button>
+
+    <script>
+        let btn = document.getElementById('togglebtn');
+        let bulb = document.getElementById('bulb');
+        btn.addEventListener('click',togglrbulb);
+
+        function togglrbulb(e){
+            if(btn.textContent.includes('ON')){
+            bulb.src="https://images.pond5.com/light-bulb-filament-forms-word-footage-040105778_iconl.jpeg"
+            btn.textContent='OFF'
+            }
+            else{
+                bulb.src="https://st2.depositphotos.com/6499014/12269/i/450/depositphotos_122692876-stock-photo-tungsten-on-black-background.jpg?forcejpeg=true";
+                btn.textContent='ON';
+            }
+        }
+    </script>
+</body>
+</html>
